@@ -12,7 +12,7 @@ class ListCategoriesComposer
      *
      * @var UserRepository
      */
-    protected $users;
+    // protected $users;
 
     /**
      * Create a new profile composer.
@@ -37,6 +37,6 @@ class ListCategoriesComposer
      */
     public function compose(View $view)
     {
-        $view->with('count', $this->users->count());
+        $view->with('list_categories', \Category::all());
     }
 }
